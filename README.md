@@ -15,7 +15,7 @@ $ pip install cookiecutter
 ```
 Give names for your directory, project, and app when prompted by Cookiecutter:
 ```console
-$ cookiecutter https://github.com/TAMU-CPT/cc-automated-drf-template.git
+$ cookiecutter https://github.com/rryanburton/cc-automated-drf-template-rb.git
 dir_name [test-project]:
 project_name [project]:
 app_name [base_app]:
@@ -25,6 +25,9 @@ Modify your models.py file in your app. Then navigate to where manage.py and scr
 $ python script.py
 ```
 The script will install all requirements and automatically apply migrations.
+#### Note on virtual environments:
+If you have already set up/activated a virtual environment, make sure to use the ```--disable_venv``` flag.
+Otherwise, a virtualenv will be created for you. 
 
 That's it! You now have automatically-templated views, serializers, urls, and admin files based on your models.
 To check it all out, run the server. Don't forget to activate your virtualenv! You may also want to createsuperuser so that
@@ -35,9 +38,7 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-#### Note on virtual environments:
-If you have already set up/activated a virtual environment, make sure to use the ```--disable_venv``` flag.
-Otherwise, a virtualenv will be created for you. 
+
 
 ## Multiple app support
 Some Django projects have multiple apps in addition to the base application.
